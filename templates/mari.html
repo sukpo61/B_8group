@@ -90,7 +90,7 @@
 
             $.ajax({
                 type: 'POST',
-                url: '/marina',
+                url: '/mari',
                 data: {'name_give': name, 'comment_give': comment},
                 success: function (response) {
                     alert(response['msg'])
@@ -104,7 +104,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/marina",
+                url: "/mari",
                 data: {},
                 success: function (response) {
                     let rows = response['comments']
@@ -211,20 +211,20 @@
 <div class="mycards" id="comment-list">
 </div>
 <div class="navigate">
-    <div class="item box3" onclick="location.href='1.html'">
+    <div class="item box3" onclick="location.href='yee.html'">
         <img alt="이희령 프로필 보러 가기"
              src="https://upload.wikimedia.org/wikipedia/ko/4/4a/%EC%8B%A0%EC%A7%B1%EA%B5%AC.png"
              width=250" height="250">
     </div>
 
-    <div class="item box4" onclick="location.href='2.html'">
+    <div class="item box4" onclick="location.href='kimw.html'">
         <img alt="김원준 프로필 보러 가기"
              src="https://file.namu.moe/file/8bc9e381797334eb33da66e3ba501be174c500cb4a9748edefc2230d3bec2e6fc92d2f74cd1e5b71991cd16fac3fc1e5"
              width=250" height="250">
 
     </div>
 
-    <div class="item box5" onclick="location.href='3.html'">
+    <div class="item box5" onclick="location.href='kimm.html'">
         <a href="김명준님 개인 프로필">
             <img alt="김명준"
                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAGf8r6sM6XkRcYn1V9dFkGq5UH5lx1tmWw&usqp=CAU"
@@ -233,7 +233,7 @@
 
     </div>
 
-    <div class="item box6" onclick="location.href='4.html'">
+    <div class="item box6" onclick="location.href='go.html'">
         <a href="고현석님 개인 프로필">
             <img alt="고현석 프로필 보러 가기"
                  src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/cnoC/image/zEhZ2awRcQW18YL-RfpDDNPbcJs.PNG"
