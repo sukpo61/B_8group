@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="아이유 팬명록"/>
+    <meta property="og:description" content="아이유 좋아"/>
+    <meta property="og:image" content="https://img.youtube.com/vi/YlY2CJaErdE/maxresdefault.jpg"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/go_style.css') }}">
+
+   <link rel="stylesheet" href="/static/css/go_style.css">
+
+    <script src="{{ url_for('static',filename='js/go_script.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/go_server.js') }}"></script>
+
+
+    <title>고현석 개인소개</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="mytitle">
+        <h1>let 리액트 천재</h1>
+        <p>~얼렁뚱땅 빙글빙글 돌아가는 코딩의 하루~</p>
+    </div>
+
+<div class="wrap">
+    <div class="img_box">
+        <div class="picture">
+            <img src="/static/images/explode.jpg" width="100%">
+            <!--        <div class="item box1"></div>-->
+            <!--        <div class="item box2"></div>-->
+            <!--        <div class="item box3"></div>-->
+        </div>
+        <div class="person">
+            <img src="/static/images/person.png" width="1152px" height="648px">
+        </div>
+    </div>
+    <div class="intro_text">
+        <h1> '즐겁게 코딩 노동' </h1>
+    </div>
+    <div class="introduce">
+        <div class="item box1">
+            환상의 코딩나라에온 고현석입니다.<br>
+            Mbti : infp ▷ intj
+
+        </div>
+        <div class="item box2">
+            객관적으로 생각하려는 것이 객관적으로 살펴본<br> 저의 객관적 장점인것 같습니다.
+        </div>
+
+    </div>
+
+
+    <div class="mypost">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" placeholder="url">
+            <label for="floatingInput">닉네임</label>
+        </div>
+        <div class="form-floating">
+<textarea class="form-control" placeholder="Leave a comment here" id="comment"
+          style="height: 100px"></textarea>
+            <label for="floatingTextarea2">응원댓글</label>
+        </div>
+        <button onclick="save_comment()" type="button" class="btn btn-dark">응원 남기기</button>
+    </div>
+    <div class="mycards" id="comment-list">
+
+    </div>
+
+    <div class="navigate">
+
+        <div class="item box3" onclick="location.href='yee.html'">
+            <img alt="이희령 프로필 보러 가기"
+                 src="https://upload.wikimedia.org/wikipedia/ko/4/4a/%EC%8B%A0%EC%A7%B1%EA%B5%AC.png"
+                 width=250" height="250">
+        </div>
+
+        <div class="item box4" onclick="location.href='kimw.html'">
+            <img alt="김원준 프로필 보러 가기"
+                 src="https://file.namu.moe/file/8bc9e381797334eb33da66e3ba501be174c500cb4a9748edefc2230d3bec2e6fc92d2f74cd1e5b71991cd16fac3fc1e5"
+                 width=250" height="250">
+
+        </div>
+
+        <div class="item box5" onclick="location.href='kimm.html'">
+            <a href="김명준님 개인 프로필">
+                <img alt="김명준"
+                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAGf8r6sM6XkRcYn1V9dFkGq5UH5lx1tmWw&usqp=CAU"
+                     width=250" height="250">
+            </a>
+
+        </div>
+
+        <div class="item box6" onclick="location.href='mari.html'">
+            <a href="남마리나님 개인 프로필">
+                <img alt="남마리나 프로필 보러 가기"
+                     src="https://w.namu.la/s/cb44538b575f372318ce9c28cd806dde1e6ac146514283b57b696ad7226ca18971fdae5716367e639a3345594b8cdfbf119bcc971b7a686b17c0873402ad659d281547a33a1363f6d4e8639bc6719ed63d30020f3be3c696a10a0e66d0a8d729"
+                     width=300" height="300">
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<!--<script src="/static/js/go_server.js"></script>-->
+<!--<script src="/static/js/go_script.js"></script>-->
+
+</body>
+
+    <div class="mytitle">
+    </div>
+
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+
+    <title>스파르타코딩클럽 | 미니프로젝트</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Gaegu', cursive;;
+        }
+
+        .mytitle {
+            width: 100%;
+            height: 300px;
+
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://w.namu.la/s/41a1b19b1452a7d326d5a71c8b7dd95b60b1727029806898798b06565c155e8b4163ba2ac004006b4a982f923bc5555d202d9f87055d11ae71e9f186236018163b08b2cf8a93022eeeeff866f4d9ab7874f07abf0fd2ece4284995601fe1f7ce36f7857b6444150f97368607b4beafb4);
+            background-position: center;
+            background-size: cover;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .mytitle > h3 {
+            margin-top: 50px;
+        }
+        .mypost {
+            max-width: 400px;
+            width: 95%;
+
+            margin: 20px auto 0px auto;
+
+            box-shadow: 0px 0px 3px 0px gray;
+            padding: 20px;
+        }
+
+        .mybtn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .mybtn > button:hover{
+            border: 2px solid mediumpurple;
+        }
+        .mylogin {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            border: transparent;
+            margin: 20px;
+        }
+        .card > .card-body {
+            margin-bottom: 10px;
+            border: solid mediumpurple;
+        }
+
+        .figure {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            grid-auto-rows: minmax(100px, auto);
+        }
+
+        .figure > a:hover{
+            border: 2px solid mediumpurple;
+        }
+    </style>
+    <script>
+<!--        날씨 말고 다른걸로 변경-->
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
+                data: {},
+                success: function (response) {
+                    let temp = response['temp']
+                    $('#temp').text(temp)
+                }
+            })
+        });
+
+    </script>
+</head>
+
+<body>
+<div class="mylogin">
+    <div class="mytitle">
+        <h1>let 리액트 천재</h1>
+        <p>~얼렁뚱땅 빙글빙글 돌아가는 코딩의 하루~</p>
+    </div>
+
+    <div class="team">
+<!--        팀 소개 글 삽입 -->
+        <div class = "teamdesc">
+            <br>
+            <h1>8조: let 리액트 천재</h1>
+            <p class="fs-4">코딩을 시작 할 때 많이 사용하는 <mark>변수지정</mark> 형식을 사용하여 코딩의 세계로 첫 발을 내딛는 것을 나타내고자 했습니다!</p>
+            <p class="fs-4">변수를 '리엑트 천재'로 지정함으로써 캠프를 통해 천재로 <mark>레벨 업</mark>하겠다는 의지와 약속을 담고 있습니다😄</p>
+            <br>
+            <p class="fs-3" class="fw-bold">팀원들의 프로필 보러가기!</p>
+            <p class="fs-4">*캐릭터를 눌러주세요*</p>
+        </div>
+
+        <figure class="figure">
+            <a href="이희령님 개인 프로필">
+                <img alt="이희령 프로필 보러 가기" src="https://upload.wikimedia.org/wikipedia/ko/4/4a/%EC%8B%A0%EC%A7%B1%EA%B5%AC.png"
+                     width=300" height="300">
+            </a>
+            <a href="김원준님 개인 프로필">
+                <img alt="김원준 프로필 보러 가기" src="https://file.namu.moe/file/8bc9e381797334eb33da66e3ba501be174c500cb4a9748edefc2230d3bec2e6fc92d2f74cd1e5b71991cd16fac3fc1e5"
+                     width=300" height="300">
+            </a>
+            <a href="김명준님 개인 프로필">
+                <img alt="김명준" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAGf8r6sM6XkRcYn1V9dFkGq5UH5lx1tmWw&usqp=CAU"
+                     width=300" height="300">
+            </a>
+            <a href="고현석님 개인 프로필">
+                <img alt="고현석 프로필 보러 가기" src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/cnoC/image/zEhZ2awRcQW18YL-RfpDDNPbcJs.PNG"
+                     width=300" height="300">
+            </a>
+            <a href="남마리나님 개인 프로필">
+                <img alt="남마리나 프로필 보러 가기" src="https://w.namu.la/s/cb44538b575f372318ce9c28cd806dde1e6ac146514283b57b696ad7226ca18971fdae5716367e639a3345594b8cdfbf119bcc971b7a686b17c0873402ad659d281547a33a1363f6d4e8639bc6719ed63d30020f3be3c696a10a0e66d0a8d729"
+                     width=300" height="300">
+            </a>
+<!--유리 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjAnoeXx8OPHl9vDtSHfl8kulcdplAvyO3pg&usqp=CAU            -->
+<!--짱구 https://upload.wikimedia.org/wikipedia/ko/4/4a/%EC%8B%A0%EC%A7%B1%EA%B5%AC.png-->
+<!--미도리 https://w.namu.la/s/c369474d2c5b51ac140f2d573f00976acd4fd6ec7cd7565cf6e02bfaf0ce55e683b2bbefbcfc7ce468b3c13e1e4c4c641ce173a5884724b7fbf043bcfa44c7563403ed21329576e475e86651213e01967d050ab758519b3970b891a51fc396f8-->
+<!--흰둥이 https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/cnoC/image/zEhZ2awRcQW18YL-RfpDDNPbcJs.PNG-->
+        </figure>
+    </div>
+
+    <div class="fans">
+        <div class="mypost">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">닉네임</label>
+            </div>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">궁금한 점이나 하고싶은 말을 써주세요!</label>
+            </div>
+            <div class="mybtn">
+                <button type="button" class="btn btn-dark">댓글남기기</button>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>포기하지말고 끝까지 함께 해요!</p>
+                        <footer class="blockquote-footer">옆집 개 누렁이</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

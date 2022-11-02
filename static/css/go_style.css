@@ -1,0 +1,144 @@
+* {
+    font-family: 'Gaegu', cursive;;
+    margin: 0;
+    padding: 0;
+}
+
+ .mytitle {
+            width: 100%;
+            height: 300px;
+
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://w.namu.la/s/41a1b19b1452a7d326d5a71c8b7dd95b60b1727029806898798b06565c155e8b4163ba2ac004006b4a982f923bc5555d202d9f87055d11ae71e9f186236018163b08b2cf8a93022eeeeff866f4d9ab7874f07abf0fd2ece4284995601fe1f7ce36f7857b6444150f97368607b4beafb4);
+            background-position: center 30%;
+            background-size: cover;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+.mypost {
+    width: 95%;
+    margin: 20px auto 20px auto;
+    padding: 10px;
+}
+
+.mypost > button {
+    margin-top: 15px;
+}
+
+.mycards {
+    width: 95%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.mycards > .card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+
+    width: 1200px;
+    margin: 0 auto;
+    border-left: solid 1px #c4c4c4;
+    border-right: solid 1px #c4c4c4;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    -webkit-box-shadow: 0px 0px 17px 2px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 0px 17px 2px rgba(0, 0, 0, 0.14);
+}
+
+.box1 {
+    padding: 20px;
+    font-size: 25px;
+}
+
+.box2 {
+    padding: 20px;
+    font-size: 25px;
+
+}
+
+
+.picture {
+    top: -50px;
+    width: 100%;
+    height: 400px;
+    position: relative;
+
+}
+
+.person {
+    position: relative;
+    top: -450px;
+    left: 50px;
+
+}
+
+.img_box {
+    overflow: hidden;
+    height: 400px;
+}
+
+.introduce {
+    padding: 20px;
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-auto-rows: minmax(300px, auto);
+
+
+}
+
+.intro_text {
+    padding: 30px;
+    background-color: ;
+    color: #ff5959;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigate {
+    padding: 20px;
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(300px, auto);
+
+}
+
+.box3:hover {
+    padding: 0px 20px;
+    background-color: #e8e8e8;
+}
+
+.box4:hover {
+    background-color: #e8e8e8;
+    padding: 0px 20px;
+}
+
+.box5:hover {
+    background-color: #e8e8e8;
+    padding: 0px 20px;
+}
+
+.box6:hover {
+    background-color: #e8e8e8;
+    padding: 0px 20px;
+}
+
