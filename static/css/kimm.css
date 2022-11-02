@@ -1,0 +1,137 @@
+    * {
+        font-family: 'Gaegu', cursive;;
+    }
+        .mytitle {
+           width: 100%;
+           height: 300px;
+
+           background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://w.namu.la/s/41a1b19b1452a7d326d5a71c8b7dd95b60b1727029806898798b06565c155e8b4163ba2ac004006b4a982f923bc5555d202d9f87055d11ae71e9f186236018163b08b2cf8a93022eeeeff866f4d9ab7874f07abf0fd2ece4284995601fe1f7ce36f7857b6444150f97368607b4beafb4);
+           background-position: center 30%;
+           background-size: cover;
+
+           color: white;
+
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+       }
+
+        .mypic {
+            width: 100%;
+            height: 200px;
+
+
+            background-position: center;
+            background-size: cover;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .mypic > h1 {
+            font-size: 30px;
+        }
+        .mybox {
+            width: 95%;
+            max-width: 700px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px 0px lightblue;
+            margin: 20px auto;
+        }
+        .kmj {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .kmj > input {
+            width: 70%;
+        }
+        .mybox > li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 10px;
+            min-height: 48px;
+        }
+        .mybox > li > h2 {
+            max-width: 75%;
+            font-size: 20px;
+            font-weight: 500;
+            margin-right: auto;
+            margin-bottom: 0px;
+        }
+        .mybox > li > h2.done {
+            text-decoration:line-through
+        }
+
+        .first {
+              margin: 30px 15px 30px 125px;
+              box-shadow: 0px 0px 10px 0px lightblue;
+
+        }
+
+
+        .second {
+              margin: 30px 15px 30px 10px;
+              box-shadow: 0px 0px 10px 0px lightblue;
+        }
+
+        .third {
+            margin: 30px 15px 30px 10px;
+            box-shadow: 0px 0px 10px 0px lightblue;
+        }
+
+        .fifth {
+            margin: 30px 15px 30px 10px;
+            box-shadow: 0px 0px 10px 0px lightblue;
+        }
+
+        .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    -webkit-box-shadow: 0px 0px 17px 2px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 0px 17px 2px rgba(0, 0, 0, 0.14);
+}
+.navigate {
+    border-top: solid 1px #c4c4c4;
+    padding: 20px;
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(300px, auto);
+    margin-top: 100px;
+
+}
+
+.box3{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.box3:hover {
+    background-color: #e8e8e8;
+}
+
+.blog_navigate {
+    padding: 20px;
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+
+
