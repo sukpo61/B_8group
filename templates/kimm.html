@@ -2,10 +2,134 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-<div>dfasfdasfdas</div>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+
+    <title>자기 소개</title>
+    <link rel="stylesheet" href="../static/home.css">
 </head>
+<script src="../static/home.js"></script>
 <body>
 
+<div class="mytitle">
+    <h1>let 리액트 천재</h1>
+    <p>~얼렁뚱땅 빙글빙글 돌아가는 코딩의 하루~</p>
+</div>
+<div class="row">
+    <div class="first" style="width: 18rem;">
+  <img src="../static/mj.JPG" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">프로필</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">이름: 김명준</li>
+    <li class="list-group-item">MBTI: INFJ</li>
+    <li class="list-group-item">E-MAIL: charmblues@gmail.com</li>
+  </ul>
+</div>
+    <div class="second" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">TMI</h5>
+    <p class="card-text">안녕하세요. 저는 평생을 속초에서 살다가 이번에 코딩을 배우게 되면서 이틀 전에 구파발로 이사를 왔습니다.</p>
+      <div>
+          <p>맡은 것이 생긴다면 최대한 될때까지 하려고 노력을 하는 편입니다. 이게 어떻게 보면 단점이지만
+          다른 관점에서는 장점이라고 생각을 해서 적게 되었습니다. 부족하지만 잘 부탁드리겠습니다.</p>
+      </div>
+      <div>
+          <p>TMI지만 사진에 같이 있는 강아지는 저희 가족 초롱이 입니다.</p>
+      </div>
+  </div>
+</div>
+       <div class="third" style="width: 18rem;">
+  <img src="../static/crs.JPG" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">프로필</h5>
+    <p class="card-text"></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">이름: 김초롱</li>
+    <li class="list-group-item">나이: 22개월</li>
+    <li class="list-group-item">성별: 여자아이</li>
+  </ul>
+</div>
+        <div class="fifth" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">TMI</h5>
+    <p class="card-text">초롱이는 작년 1월에 태어났구요. 비숑 프리제라는 견종입니다.
+    산책하는 것을 가장 좋아하고 상추와 사과를 굉장히 좋아합니다.</p>
+      <div>
+          <p>사람을 너무 너무 좋아해서 산책을 나가면 지나가는 사람들을 쫓아 가려고 합니다.
+          그리고 주인과 함께 침대에서 자야만 하는 아이입니다.</p>
+      </div>
+  </div>
+</div>
+</div>
+    <div class="mybox">
+        <div class="kmj">
+            <input id="name" class="form-control" type="text" placeholder="이름">
+            <input id="comment" class="form-control" type="text" placeholder="응원 남겨주세요.">
+            <button onclick="save_home()" type="button" class="btn btn-outline-primary">응원하기</button>
+        </div>
+    </div>
+    <div class="mybox" id="comment-list">
+    </div>
+<div class="navigate">
+
+    <div class="item box3" onclick="location.href='1.html'">
+        <img alt="이희령 프로필 보러 가기"
+             src="https://upload.wikimedia.org/wikipedia/ko/4/4a/%EC%8B%A0%EC%A7%B1%EA%B5%AC.png"
+             width=250" height="250">
+    </div>
+
+    <div class="item box4" onclick="location.href='2.html'">
+        <img alt="김원준 프로필 보러 가기"
+             src="https://file.namu.moe/file/8bc9e381797334eb33da66e3ba501be174c500cb4a9748edefc2230d3bec2e6fc92d2f74cd1e5b71991cd16fac3fc1e5"
+             width=250" height="250">
+
+    </div>
+
+    <div class="item box5" onclick="location.href='3.html'">
+        <a href="김명준님 개인 프로필">
+            <img alt="김명준"
+                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAGf8r6sM6XkRcYn1V9dFkGq5UH5lx1tmWw&usqp=CAU"
+                 width=250" height="250">
+        </a>
+
+    </div>
+
+    <div class="item box6" onclick="location.href='4.html'">
+        <a href="남마리나님 개인 프로필">
+            <img alt="남마리나 프로필 보러 가기"
+                 src="https://w.namu.la/s/cb44538b575f372318ce9c28cd806dde1e6ac146514283b57b696ad7226ca18971fdae5716367e639a3345594b8cdfbf119bcc971b7a686b17c0873402ad659d281547a33a1363f6d4e8639bc6719ed63d30020f3be3c696a10a0e66d0a8d729"
+                 width=300" height="300">
+        </a>
+    </div>
+
+</div>
+    <div class="downbar">
+        <div class="downwrap">
+            <div class="blog_navigate">
+                <div class="item box3" onclick="location.href='https://hinu.tistory.com'"><span>현석님 blog<span></div>
+
+                <div class="item box3" onclick="location.href='https://velog.io/@kimwonjuun '"><span>원준님 blog<span></div>
+
+                <div class="item box3" onclick="location.href='https://maengjun.tistory.com'"><span>명준님 blog<span></div>
+
+                <div class="item box3" onclick="location.href='https://velog.io/@yangmal'"><span>마리나님 blog<span></div>
+
+                <div class="item box3" onclick="location.href='https://divheer.tistory.com'"><span>희령님 blog<span></div>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
