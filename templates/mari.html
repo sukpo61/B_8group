@@ -43,7 +43,7 @@
 
         .mypost {
             margin: 20px auto 20px auto;
-            max-width: 500px;
+            width: 500px;
         }
 
         .mypost > button {
@@ -102,28 +102,23 @@
 
         .box1:hover {
             background-color: #e8e8e8;
-            padding: 0px 20px;
 
         }
 
         .box2:hover {
             background-color: #e8e8e8;
-            padding: 0px 20px;
         }
 
         .box3:hover {
             background-color: #e8e8e8;
-            padding: 0px 20px;
         }
 
         .box4:hover {
             background-color: #e8e8e8;
-            padding: 0px 20px;
         }
 
         .box5:hover {
             background-color: #e8e8e8;
-            padding: 0px 20px;
         }
 
         .blog_navigate {
@@ -143,6 +138,32 @@
             border-left: solid 1px #c4c4c4;
             border-right: solid 1px #c4c4c4;
         }
+        .box3{
+    display: flex;
+    flex-direction: column;
+
+}
+        .downwrap{
+        display: flex;
+    flex-direction: column;
+
+    width: 1200px;
+    margin: 0 auto;
+}
+        .downbar {
+    width: 100%;
+    height: 300px;
+
+    background-color: #f5f5f5;
+    background-position: center 30%;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
     </style>
 
@@ -286,41 +307,41 @@
 </div>
 
 
-<div class="item navigate">
-    <div class="item box1" onclick="location.href='/yee'">
-        <a href="/yee" target="_blank"></a>
-        <img alt="이희령 프로필 보러 가기"
-             src="https://upload.wikimedia.org/wikipedia/ko/4/4a/%EC%8B%A0%EC%A7%B1%EA%B5%AC.png"
-             width=250" height="250">
-    </div>
+    <div class="navigate">
 
-    <div class="item box2" onclick="location.href='/kimw'">
-        <a href="/kimw" target="_blank"></a>
-        <img alt="김원준 프로필 보러 가기"
-             src="https://file.namu.moe/file/8bc9e381797334eb33da66e3ba501be174c500cb4a9748edefc2230d3bec2e6fc92d2f74cd1e5b71991cd16fac3fc1e5"
-             width=250" height="250">
-
-    </div>
-
-    <div class="item box3" onclick="location.href='/kimm'">
-        <a href="/kimm" target="_blank">
-            <img alt="김명준"
-                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAGf8r6sM6XkRcYn1V9dFkGq5UH5lx1tmWw&usqp=CAU"
+        <div class="item box3" onclick="location.href='/yee'">
+            <img alt="이희령 프로필 보러 가기"
+                 src="https://upload.wikimedia.org/wikipedia/ko/4/4a/%EC%8B%A0%EC%A7%B1%EA%B5%AC.png"
                  width=250" height="250">
-        </a>
+            <span>이희령</span>
+        </div>
 
-    </div>
-
-    <div class="item box4" onclick="location.href ='/go.html'">
-        <a href="/go" target="_blank">
-            <img alt="고현석"
+        <div class="item box3" onclick="location.href='/go'">
+            <img alt="고현석 프로필 보러 가기"
                  src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/cnoC/image/zEhZ2awRcQW18YL-RfpDDNPbcJs.PNG"
-                 width=300" height="300">
-        </a>
+                 width=250" height="250">
+            <span>고현석</span>
+        </div>
+
+        <div class="item box3" onclick="location.href='/kimm'">
+                <img alt="김명준"
+                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAGf8r6sM6XkRcYn1V9dFkGq5UH5lx1tmWw&usqp=CAU"
+                     width=250" height="250">
+            <span>김명준</span>
+
+        </div>
+
+        <div class="item box3" onclick="location.href='/kimw'">
+            <img alt="김원준 프로필 보러 가기"
+                 src="https://file.namu.moe/file/8bc9e381797334eb33da66e3ba501be174c500cb4a9748edefc2230d3bec2e6fc92d2f74cd1e5b71991cd16fac3fc1e5"
+                 width=250" height="250">
+            <span>김원준</span>
+
+        </div>
+
     </div>
 </div>
-</div>
-<div class="item downbar">
+<div class="downbar">
     <div class="downwrap">
         <div class="blog_navigate">
             <div class="item box1" onclick="location.href='https://hinu.tistory.com'"><span>현석님 blog<span></div>

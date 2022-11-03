@@ -35,6 +35,15 @@
         .mypic > h1 {
             font-size: 30px;
         }
+        .wrap {
+    display: flex;
+    flex-direction: column;
+
+    width: 1200px;
+    margin: 0 auto;
+    border-left: solid 1px #c4c4c4;
+    border-right: solid 1px #c4c4c4;
+}
         .mybox {
             width: 95%;
             max-width: 700px;
@@ -73,24 +82,20 @@
         }
 
         .first {
-              margin: 30px 15px 30px 125px;
               box-shadow: 0px 0px 10px 0px lightblue;
 
         }
 
 
         .second {
-              margin: 30px 15px 30px 10px;
               box-shadow: 0px 0px 10px 0px lightblue;
         }
 
         .third {
-            margin: 30px 15px 30px 10px;
             box-shadow: 0px 0px 10px 0px lightblue;
         }
 
         .fifth {
-            margin: 30px 15px 30px 10px;
             box-shadow: 0px 0px 10px 0px lightblue;
         }
 
@@ -156,3 +161,6 @@
     justify-content: center;
 }
 
+.row{
+    margin: 30px auto 0 auto;
+}
