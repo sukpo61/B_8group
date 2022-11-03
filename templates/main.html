@@ -73,30 +73,31 @@
             margin-bottom: 10px;
             border: solid mediumpurple;
         }
-
+        .team > teamdesc{
+            margin: 20px auto 0px auto;
+            align-content: center;
+        }
         .figure {
             border-top: solid 1px #c4c4c4;
-            padding: 20px;
             grid-gap: 20px;
             display: grid;
-            grid-template-columns:1fr 1fr 1fr 1fr;
             grid-auto-rows: minmax(300px, auto);
             margin: 20px auto 0px auto;
+            padding: 50px;
+            max-width: 800px;
+            box-sizing: border-box;
+            grid-template-columns: 300px 300px 300px;
+            gap: 10px;
         }
 
         .figure > a:hover{
             border: 2px solid lightgoldenrodyellow;
             border-radius: 20%;
         }
-
-        .figure {
-            padding: 50px;
-            max-width: 800px;
-            display: grid;
-            box-sizing: border-box;
-            grid-template-columns: 300px 300px 300px;
-            gap: 10px;
+        .container {
+            align-items: center;
         }
+
     </style>
     <script>
         function navi() {
@@ -118,8 +119,8 @@
         <p>~얼렁뚱땅 빙글빙글 돌아가는 코딩의 하루~</p>
     </div>
 
-    <div class="team">
-        <div class = "teamdesc">
+    <div class="container">
+        <div class = "item">
             <br>
             <h1>8조: let 리액트 천재</h1>
             <p class="fs-4">코딩을 시작 할 때 많이 사용하는 <mark>변수지정</mark> 형식을 사용하여 코딩의 세계로 첫 발을 내딛는 것을 나타내고자 했습니다!</p>
