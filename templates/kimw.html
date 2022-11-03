@@ -1,10 +1,351 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://ajax.kimwogleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <title>스파르타코딩클럽 | 미니프로젝트</title>
+    <link href="https://fonts.kimwogleapis.com/css2?family=Gothic+A1:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            font-family: 'Gaegu', cursive;;
+        }
+
+        .mytitle {
+            width: 100%;
+            height: 300px;
+
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://w.namu.la/s/41a1b19b1452a7d326d5a71c8b7dd95b60b1727029806898798b06565c155e8b4163ba2ac004006b4a982f923bc5555d202d9f87055d11ae71e9f186236018163b08b2cf8a93022eeeeff866f4d9ab7874f07abf0fd2ece4284995601fe1f7ce36f7857b6444150f97368607b4beafb4);
+            background-position: center 30%;
+            background-size: cover;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mypost {
+            width: 95%;
+            max-width: 1200px;
+            margin: 20px auto 0px auto;
+            padding: 20px;
+            box-shadow: 0px 0px 3px 0px gray;
+        }
+
+        .mypost > button {
+            margin-top: 10px;
+        }
+
+        .navigate {
+            padding: 20px;
+            grid-gap: 20px;
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr 1fr;
+            grid-auto-rows: minmax(300px, auto);
+
+            width: 95%;
+            max-width: 1200px;
+            margin: 20px auto 0px auto;
+        }
+
+        .box3:hover {
+            padding: 0px 20px;
+            background-color: #e8e8e8;
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            -webkit-box-shadow: 0px 0px 17px 2px rgba(0, 0, 0, 0.14);
+            box-shadow: 0px 0px 17px 2px rgba(0, 0, 0, 0.14);
+        }
+
+        .card {
+            width: 95%;
+            max-width: 1200px;
+            margin: 5px auto 20px auto;
+            padding: 20px;
+        }
+
+        .card-text {
+            margin: 20px auto 50px auto;
+            text-align: center;
+            font-size: 31px;
+        }
+
+        .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    -webkit-box-shadow: 0px 0px 17px 2px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 0px 17px 2px rgba(0, 0, 0, 0.14);
+}
+.navigate {
+    border-top: solid 1px #c4c4c4;
+    padding: 20px;
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(300px, auto);
+    margin-top: 100px;
+
+}
+
+.box3{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.box3:hover {
+    background-color: #e8e8e8;
+}
+
+.blog_navigate {
+    padding: 20px;
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.downwrap{
+        display: flex;
+    flex-direction: column;
+
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.downbar {
+    width: 100%;
+    height: 300px;
+
+    background-color: #f5f5f5;
+    background-position: center 30%;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+    </style>
+
+    <script>
+     $(document).ready(function () {
+            show_comment()
+        });
+
+        function save_comment() {
+
+            let name = $('#name').val()
+            let comment = $('#comment').val()
+
+            $.ajax({
+                type: 'POST',
+                url: '/kimw_comment',
+                data: {'name_give' : name, 'comment_give' : comment},
+                success: function (response) {
+                    alert(response['msg'])
+                    window.location.reload()
+                }
+            })
+        }
+
+        function show_comment() {
+            $.ajax({
+                type: "GET",
+                url: "/kimw_comment",
+                data: {},
+                success: function (response) {
+                    let rows = response['kimw_comments']
+                    for (i = 0; i < rows.length; i++) {
+                        let name = rows[i]['name']
+                        let comment = rows[i]['comment']
+
+                        let temp_html = `<div class="card">
+                                            <div class="card-body">
+                                                <blockquote class="blockquote mb-0">
+                                                    <p>${comment}</p>
+                                                    <footer class="blockquote-footer">${name}</footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>`
+
+                        $("#comment-list").append(temp_html)
+
+
+                    }
+                }
+            });
+        }
+    </script>
+
 </head>
+
 <body>
-<h1>3</h1>
+
+<div class="mylogin">
+    <div class="mytitle">
+        <h1>let 리액트 천재</h1>
+        <p>~얼렁뚱땅 빙글빙글 돌아가는 코딩의 하루~</p>
+    </div>
+</div>
+
+<div class="mypost">
+  <div class="card" style="width: 72.5rem;">
+    <img src="/static/images/hello.jpg">
+    <div class="card-body">
+      <p class="card-text">안녕하세요? 최근 사진이 다 날아가서 무려 7년 전 사진입니다. 지금과는 많이 다르네요.</p>
+      <div>
+        <h4>나에대한 설명 및 MBTI</h4>
+        <p>행복은 습관이라고 생각하는 사람. . ? MBTI 검사를 하면 ISFJ로 나오지만 맞지 않는 것 같음.</p>
+      </div>
+
+      <div>
+        <h4>객관적으로 살펴본 나의 장점</h4>
+        <p>성실함.</p>
+      </div>
+
+      <div>
+        <h4>협업을 하는 과정에서의 나의 스타일</h4>
+        <p>최소한의 마찰로 최대한의 효율과 이로움을 추구하고자 함.</p>
+      </div>
+
+      <div>
+        <h4>우리 팀은?</h4>
+        <p>늘 서로에게 친절한 우리 팀은 오늘보다 내일 더 발전할 것임.</p>
+      </div>
+
+      <div>
+        <h4>우리 팀 약속?</h4>
+        <p>항상 파이팅 하기!</p>
+      </div>
+
+      <div>
+        <h4>블로그 주소</h4>
+        <p>https://velog.io/@kimwonjuun</p>
+      </div>
+
+    </div>
+  </div>
+
+    <div class="mypost">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" placeholder="url">
+            <label for="floatingInput">닉네임</label>
+        </div>
+        <div class="form-floating">
+<textarea class="form-control" placeholder="Leave a comment here" id="comment"
+          style="height: 100px"></textarea>
+            <label for="floatingTextarea2">응원댓글</label>
+        </div>
+        <button onclick="save_comment()" type="button" class="btn btn-dark">응원 남기기</button>
+    </div>
+
+        <div class="mycards" id="comment-list">
+
+    </div>
+
+
+
+
+    <div class="navigate">
+
+        <div class="item box3" onclick="location.href='/yee'">
+            <img alt="이희령 프로필 보러 가기"
+                 src="https://upload.wikimedia.org/wikipedia/ko/4/4a/%EC%8B%A0%EC%A7%B1%EA%B5%AC.png"
+                 width=250" height="250">
+            <span>이희령</span>
+        </div>
+
+        <div class="item box3" onclick="location.href='/kimw'">
+            <img alt="김원준 프로필 보러 가기"
+                 src="https://file.namu.moe/file/8bc9e381797334eb33da66e3ba501be174c500cb4a9748edefc2230d3bec2e6fc92d2f74cd1e5b71991cd16fac3fc1e5"
+                 width=250" height="250">
+            <span>김원준</span>
+
+        </div>
+
+        <div class="item box3" onclick="location.href='/kimm'">
+                <img alt="김명준"
+                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAGf8r6sM6XkRcYn1V9dFkGq5UH5lx1tmWw&usqp=CAU"
+                     width=250" height="250">
+            <span>김명준</span>
+
+        </div>
+
+        <div class="item box3" onclick="location.href='/mari'">
+                <img alt="남마리나 프로필 보러 가기"
+                     src="https://w.namu.la/s/cb44538b575f372318ce9c28cd806dde1e6ac146514283b57b696ad7226ca18971fdae5716367e639a3345594b8cdfbf119bcc971b7a686b17c0873402ad659d281547a33a1363f6d4e8639bc6719ed63d30020f3be3c696a10a0e66d0a8d729"
+                     width=250" height="250">
+            <span>남마리나</span>
+        </div>
+
+    </div>
+
+</div>
+
+
 </body>
+
+    <div class="downbar">
+
+        <div class="downwrap">
+
+            <div class="blog_navigate">
+
+                <div class="item box3" onclick="location.href='https://hinu.tistory.com'"><span>현석님 blog<span></div>
+
+                <div class="item box3" onclick="location.href='https://velog.io/@kimwonjuun '"><span>원준님 blog<span></div>
+
+                <div class="item box3" onclick="location.href='https://maengjun.tistory.com'"><span>명준님 blog<span></div>
+
+                <div class="item box3" onclick="location.href='https://velog.io/@yangmal'"><span>마리나님 blog<span></div>
+
+                <div class="item box3" onclick="location.href='https://divheer.tistory.com'"><span>희령님 blog<span></div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
 </html>
