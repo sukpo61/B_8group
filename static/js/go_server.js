@@ -21,7 +21,7 @@ $(document).ready(function () {
 
             $.ajax({
                 type: 'POST',
-                url: '/homework',
+                url: '/go_comment',
                 data: {'name_give' : name, 'comment_give' : comment},
                 success: function (response) {
                     alert(response['msg'])
@@ -33,10 +33,10 @@ $(document).ready(function () {
         function show_comment() {
             $.ajax({
                 type: "GET",
-                url: "/homework",
+                url: "/go_comment",
                 data: {},
                 success: function (response) {
-                    let rows = response['fans']
+                    let rows = response['go_comments']
                     for (i = 0; i < rows.length; i++) {
                         let name = rows[i]['name']
                         let comment = rows[i]['comment']
