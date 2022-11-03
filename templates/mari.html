@@ -61,7 +61,7 @@
         }
 
         .myprofile {
-            margin: 3%;
+            margin: 30px auto 0 auto;
             width: 100%;
             max-width: 1200px;
             display: flex;
@@ -134,6 +134,16 @@
             grid-auto-rows: minmax(100px, auto);
         }
 
+        .wrap {
+            display: flex;
+            flex-direction: column;
+
+            width: 1200px;
+            margin: 0 auto;
+            border-left: solid 1px #c4c4c4;
+            border-right: solid 1px #c4c4c4;
+        }
+
     </style>
 
     <script>
@@ -190,10 +200,11 @@
     <h1>let 리액트 천재</h1>
     <p>~얼렁뚱땅 빙글빙글 돌아가는 코딩의 하루~</p>
 </div>
+<div class="wrap">
 <div class="container">
     <div class="item myprofile">
         <div class="mypic">
-            <img alt="남마리나" src="../static/남마리나.jpg" width=300px>
+            <img alt="남마리나" src="/static/images/mari.jpg" width=300px>
             <figcaption class="figure-caption">8조 남 마리나입니다!</figcaption>
         </div>
         <div class="profile">
@@ -307,6 +318,7 @@
                  width=300" height="300">
         </a>
     </div>
+</div>
 </div>
 <div class="item downbar">
     <div class="downwrap">
