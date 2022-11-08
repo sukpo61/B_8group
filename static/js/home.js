@@ -7,11 +7,12 @@ $(document).ready(function () {
 
             let name = $('#name').val()
             let comment = $('#comment').val()
+            let person = "kimm"
 
             $.ajax({
                 type: 'POST',
-                url: '/kimm_comment',
-                data: {'name_give' : name, 'comment_give' : comment},
+                url: '/comment',
+                data: {'name_give' : name, 'comment_give' : comment, 'person' : person},
                 success: function (response) {
                     console.log(response)
                     window.location.reload()
@@ -22,13 +23,15 @@ $(document).ready(function () {
         function show_comment() {
             $.ajax({
                 type: "GET",
-                url: "/kimm_comment",
+                url: "/comment",
                 data: {},
                 success: function (response) {
-                    let rows = response['kimm_comments']
+                    let rows = response['comments']
                     for (i = 0; i < rows.length; i++) {
+
                         let name = rows[i]['name']
                         let comment = rows[i]['comment']
+                        let person = rows[i]['person']
 
                         let temp_html = `<div class="card">
                                             <div class="card-body">
@@ -39,8 +42,11 @@ $(document).ready(function () {
                                             </div>
                                         </div>`
 
-                        $("#comment-list").append(temp_html)
-
+                        if(person == "kimm"){
+                            $("#comment-list").append(temp_html)
+                        }else{
+                            $("#comment-list").append()
+                        }
 
                     }
                 }
